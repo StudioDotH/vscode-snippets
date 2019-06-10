@@ -1,7 +1,7 @@
 {
 	// Basic TypeScript
 	"Async function with try-catch": {
-		"prefix": "tc-async",
+		"prefix": "ts-async",
 		"body": [
 			"async () => {",
 			"  try {",
@@ -12,15 +12,90 @@
 			"}"
 		]
 	},
+	"Null or undefined check": {
+		"prefix": "ts-checkempty",
+		"body": [
+			"if (${1:value} === undefined || ${1:value} === null) {",
+			"  ",
+			"}"
+		]
+	},
+	// Express
 	"Express Router": {
 		"prefix": "exp-router",
 		"body": [
-			"import express from 'express';",
+			"import React from 'react';",
 			"",
-			"const router = express.Router();",
+			"interface ${1:name}Props {",
+			"  ",
+			"}",
+			"interface ${1:name}States {",
+			"  ",
+			"}",
+			"",
+			"class ${1:name}Component extends React.Component<${1:name}Props, ${1:name}States> {",
+			"  constructor(props: ${1:name}Props) {",
+			"    super(props);",
+			"    this.states = {",
+			"      ",
+			"    };",
+			"  }",
+			"  render() {",
+			"    return (",
+			"      <div></div>",
+			"    );",
+			"  }",
+			"}",
 			"",
 			"export default router;",
 			""
+		]
+	},
+	// React
+	"ReactDOM Render Root": {
+		"prefix": "tsx-render",
+		"body": [
+			"import React from 'react';",
+			"import ReactDOM from 'react-dom';",
+			"",
+			"const rootEl = document.createElement('div');",
+			"document.body.appendChild(rootEl);",
+			"",
+			"// TODO: Assign a root component to <Root />",
+			"ReactDOM.render(<Root />, rootEl);"
+		]
+	},
+	"React ChangeEvent Handler": {
+		"prefix": "tsx-changeev",
+		"body": [
+			"${1:handlerName}(event: React.ChangeEvent<HTMLInputElement>) {",
+			"  const value = event.target.value;",
+			"}"
+		]
+	},
+	"React Component": {
+		"prefix": "tsx-comp",
+		"body": [
+			"interface ${1:name}Props {",
+			"  ",
+			"}",
+			"interface ${1:name}States {",
+			"  ",
+			"}",
+			"",
+			"class ${1:name}Component extends React.Component<${1:name}Props, ${1:name}States> {",
+			"  constructor(props: ${1:name}Props) {",
+			"    super(props);",
+			"    this.state = {",
+			"      ",
+			"    };",
+			"  }",
+			"  render() {",
+			"    return (",
+			"      <div></div>",
+			"    );",
+			"  }",
+			"}"
 		]
 	},
 	// Express
