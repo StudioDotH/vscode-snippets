@@ -20,6 +20,12 @@
 			"}"
 		]
 	},
+	"Update if exists": {
+		"prefix": "ts-update",
+		"body": [
+			"${1:target} = (${2:value} === undefined || ${2:value} === null) ? ${1:target} : ${2:value};"
+		]
+	},
 	// Express
 	"Express Router": {
 		"prefix": "exp-router",
