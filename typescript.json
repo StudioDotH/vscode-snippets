@@ -1,0 +1,70 @@
+{
+	// Basic TypeScript
+	"Async function with try-catch": {
+		"prefix": "tc-async",
+		"body": [
+			"async () => {",
+			"  try {",
+			"    ",
+			"  } catch (err) {",
+			"    throw err;",
+			"  }",
+			"}"
+		]
+	},
+	"Express Router": {
+		"prefix": "exp-router",
+		"body": [
+			"import express from 'express';",
+			"",
+			"const router = express.Router();",
+			"",
+			"export default router;",
+			""
+		]
+	},
+	// Express
+	"Express Failing Response": {
+		"prefix": "exp-fail",
+		"body": [
+			"res.status(${1:code}).json({",
+			"  success: false",
+			"});",
+			"return;"
+		]
+	},
+	// Mongoose
+	"Mongoose Schema": {
+		"prefix": "mong-schema",
+		"body": [
+			"import mongoose from 'mongoose';",
+			"export interface ${1:name} extends mongoose.Document {",
+			"  ",
+			"}",
+			"",
+			"const schema = new mongoose.Schema({",
+			"  ",
+			"});",
+			"",
+			"export const ${1:name}Model = mongoose.model<${1:name}>('${1:name}', schema);",
+			""
+		]
+	},
+	// Documentations
+	"apiDoc Comment": {
+		"prefix": "apidoc",
+		"body": [
+			"/**",
+			" * @api {${1:method}} ${3:path} ${2:name}",
+			" * @apiName ${2:name}",
+			" * @apiGroup ${4:group}",
+			" *",
+			" * @apiDescription ",
+			" *",
+			" * @apiParam",
+			" * @apiSuccess",
+			" * @apiError",
+			" */"
+		]
+	}
+}
